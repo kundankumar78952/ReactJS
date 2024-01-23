@@ -1,9 +1,6 @@
 import React from "react";
 import ReactDom from "react-dom";
 
-// import * as ques from "./Appe.jsx";
-// import Appe from './Appe.jsx';
- //import './index.css';
 import Appe from "./Appe.jsx";
 //import UseReducer from "./useReducer";
 
@@ -34,19 +31,19 @@ document.getElementById("root")
 //   , <p>I am learning react</p>,<h2>i am covering both theory plus practical, this has been done using array</h2>,],
 //   document.getElementById("root"));
 
-ReactDom.render(<>
-  <h1>netflix pick</h1>
-    <p>Here the list of my fav 5 netflix series</p>
-    <ol>
-      <li>Dark</li>
-      <li>Extra cucrricular</li>
-      <li>My Holo love</li>
-      <li>Mirzapur</li>
-       <li>jharkhand wala</li>
-    </ol>
-    </>,
-    document.getElementById("root")
-    );
+// ReactDom.render(<>
+//   <h1>netflix pick</h1>
+//     <p>Here the list of my fav 5 netflix series</p>
+//     <ol>
+//       <li>Dark</li>
+//       <li>Extra cucrricular</li>
+//       <li>My Holo love</li>
+//       <li>Mirzapur</li>
+//        <li>jharkhand wala</li>
+//     </ol>
+//     </>,
+//     document.getElementById("root")
+//     );
 //  const flname ="kundan kumar";
  
 
