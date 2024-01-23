@@ -1,6 +1,6 @@
  //import React from "react";
  import React , {useState} from "react";
-
+ import index from './index.css';
  //import AddIcon from '@mui/icons-material/Add';
  //import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
  //<script src="https://use.fontawesome.com/7237cdc153.js"></script>
@@ -13,41 +13,41 @@
 // import {add, sub, div, mult} from "./Calc";
 //import SlotM from "./SlotM";
 
-const TodoList =() =>{
-  const [num, setNum] = useState(0);
+// const TodoList =() =>{
+//   const [num, setNum] = useState(0);
 
-  const incNum= () => {
-    setNum(num + 1);
-  };
+//   const incNum= () => {
+//     setNum(num + 1);
+//   };
 
-  const decNum = () => {
-    if(num > 0){
-      setNum(num - 1);
-    }else{
-      alert("Sorry,Zero Limit Reached");
-      setNum(0);
-    }
-    };
-  return(
-    <>
-    <div className="main_div">
-      <div className="center_div">
-        <h1> {num} </h1>
-        <div className="btn_div">
-          <button onClick={incNum} className="btn_green">
-          +
-          </button>
-          <button onClick={decNum} className="btn_red">
-          -
-          </button>
-        </div>
-      </div>
-    </div>
-    </>
-  );
-};
+//   const decNum = () => {
+//     if(num > 0){
+//       setNum(num - 1);
+//     }else{
+//       alert("Sorry,Zero Limit Reached");
+//       setNum(0);
+//     }
+//     };
+//   return(
+//     <>
+//     <div className="main_div">
+//       <div className="center_div">
+//         <h1> {num} </h1>
+//         <div className="btn_div">
+//           <button onClick={incNum} className="btn_green">
+//           +
+//           </button>
+//           <button onClick={decNum} className="btn_red">
+//           -
+//           </button>
+//         </div>
+//       </div>
+//     </div>
+//     </>
+//   );
+// };
 
-export default TodoList;
+// export default TodoList;
 
 // const Appe =() =>{
 
@@ -100,14 +100,14 @@ export default TodoList;
 //      return(<>
 //           <div>
 //                <h1>Hello{name}</h1>
-//                <AcUnitIcon />
-//                <input type="text" placeholder="Enter your name"onChange={inputEvent}/>
-//                  <button>Click Me</button>
-//                         </div>
-//      </>
-//      )
+//                {/* <AcUnitIcon /> */}
+//                 <input type="text" placeholder="Enter your name"onChange={inputEvent}/>
+//                   <button>Click Me</button>
+//                       </div>
+//                           </>
+//     )
 // };
-// export default Appe;
+//     export default Appe;
 
 // const Appe=()=>{
 //      let newTime= new Date().toLocaleTimeString();
@@ -127,16 +127,16 @@ export default TodoList;
 
 
 // const Appe=() =>{
-//     // const state =useState();
+//      const state =useState();
      
-//      const[count,setCount]= useState(5);
+//      const[count,setCount]= useState(0);
      
-//     // console.log(state);
+//        console.log(state);
       
 //      const IncNum= () =>{
 //           setCount(count+1);
-//           // setCount=(count++);
-//           //console.log("clicked", count++);
+//           setCount=(count++);
+//           console.log("clicked", count++);
 //      }
 //    return(<>
 //         <h1>{count}</h1>
@@ -225,3 +225,21 @@ export default TodoList;
 //      }
 
 // export default Appe;
+
+
+const Appe = () =>{
+  let time = new Date().toLocaleTimeString();
+
+  const [ctime, setCtime] = useState(time);
+  const UpdateTime = () =>{
+    time = new Date().toLocaleTimeString();
+    setCtime(time);
+    
+  }
+  setInterval(UpdateTime, 3000);
+  return (<>
+    <h1>{ctime}</h1>
+  </>);
+}
+
+export default Appe;
