@@ -226,20 +226,41 @@
 
 // export default Appe;
 
+// const Appe = () =>{
+//   let time = new Date().toLocaleTimeString();
+
+//   const [ctime, setCtime] = useState(time);
+//   const UpdateTime = () =>{
+//     time = new Date().toLocaleTimeString();
+//     setCtime(time);
+    
+//   }
+//   setInterval(UpdateTime, 3000);
+//   return (<>
+//     <h1>{ctime}</h1>
+//   </>);
+// }
+
+// export default Appe;
 
 const Appe = () =>{
-  let time = new Date().toLocaleTimeString();
-
-  const [ctime, setCtime] = useState(time);
-  const UpdateTime = () =>{
-    time = new Date().toLocaleTimeString();
-    setCtime(time);
+  const purple= "yellow";
+  const [bg, setbg] = useState(purple);
+  const [name, setName] = useState("click Me");
     
-  }
-  setInterval(UpdateTime, 3000);
-  return (<>
-    <h1>{ctime}</h1>
-  </>);
+  const bgChange=()=>{
+    // console.log('clicked');
+    // setbg(bg);
+    let newBg = "#34495e";
+    setbg(newBg);
+    setName('oooh');
+  };
+
+  return(<>
+  <div style={{ backgroundColor: bg}}> 
+    <button onClick={bgChange}>{name}</button>
+    </div>
+  </>)
 }
 
 export default Appe;
