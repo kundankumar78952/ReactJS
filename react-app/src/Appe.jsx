@@ -247,7 +247,7 @@ const Appe = () =>{
   const purple= "yellow";
   const [bg, setbg] = useState(purple);
   const [name, setName] = useState("click Me");
-    
+  
   const bgChange=()=>{
     // console.log('clicked');
     // setbg(bg);
@@ -256,9 +256,14 @@ const Appe = () =>{
     setName('oooh');
   };
 
+  const bgBack = () =>{
+    setbg(purple);
+    setName('hoo');
+  }
+
   return(<>
   <div style={{ backgroundColor: bg}}> 
-    <button onClick={bgChange}>{name}</button>
+    <button onClick={bgChange} onDoubleClick={bgBack}>{name}</button>
     </div>
   </>)
 }
