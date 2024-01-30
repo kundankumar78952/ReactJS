@@ -1,5 +1,5 @@
  //import React from "react";
- import React , {useState} from "react";
+ import React , {useEffect, useState} from "react";
  import index from './index.css';
  //import AddIcon from '@mui/icons-material/Add';
  //import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
@@ -270,48 +270,58 @@
 
 // export default Appe;
 
-const App = () =>{
-const [name, setName] = useState();
-const [lastName, setLastName] = useState();
-const [fullName, setFullName] = useState();
-const [lastNamenew, setLastNameNew] = useState();
+// const App = () =>{
+// const [name, setName] = useState();
+// const [lastName, setLastName] = useState();
+// const [fullName, setFullName] = useState();
+// const [lastNamenew, setLastNameNew] = useState();
 
-const inputEvent =(event) =>{
-  console.log(event.target.value);
-  setName(event.target.value);
-};
-const inputEvent2 = (event) =>{
-  setLastName(event.target.value);
-}
+// const inputEvent =(event) =>{
+//   console.log(event.target.value);
+//   setName(event.target.value);
+// };
+// const inputEvent2 = (event) =>{
+//   setLastName(event.target.value);
+// }
 
-const onSubmits = (event) =>{
-  event.preventDefault();
-  setFullName(name);
-  setLastNameNew(lastName);
-}
+// const onSubmits = (event) =>{
+//   event.preventDefault();
+//   setFullName(name);
+//   setLastNameNew(lastName);
+// }
 
-  return(<>
-    <div className="main_div">
-    <form onSubmit={onSubmits}>
-    <div>
-      <h1> Hello {fullName} {lastNamenew} </h1>
-      <input  type="text" 
-      placeholder="Enter your name"
-       onChange={inputEvent} 
-       value={name}/>
-    </div>
-    <div>
-      <input  type="text" 
-      placeholder="Enter your lastname"
-       onChange={inputEvent2} 
-       value={lastName}
-       />
-      <button type="submit">Click Me</button>
-    </div>
-    </form>
-    </div>
-  </>)
+//   return(<>
+//     <div className="main_div">
+//     <form onSubmit={onSubmits}>
+//     <div>
+//       <h1> Hello {fullName} {lastNamenew} </h1>
+//       <input  type="text" 
+//       placeholder="Enter your name"
+//        onChange={inputEvent} 
+//        value={name}/>
+//     </div>
+//     <div>
+//       <input  type="text" 
+//       placeholder="Enter your lastname"
+//        onChange={inputEvent2} 
+//        value={lastName}
+//        />
+//       <button type="submit">Click Me</button>
+//     </div>
+//     </form>
+//     </div>
+//   </>)
   
-}
-export default App;
+// }
+// export default App;
 
+const Appe= ()=>{
+  const [name, setName]= useState(1);
+  useEffect(() => {
+    document.title = `you clicked ${name} times`;
+  })
+  return (<>
+    <button onClick={()=> setName(name+1)}>click me</button>
+  </>)
+}
+export default Appe;
