@@ -1,6 +1,13 @@
  //import React from "react";
- import React , {useEffect, useState} from "react";
- import index from './index.css';
+//  import React , {useEffect, useState} from "react";
+//  import index from './index.css';
+ import Layout from "./Layout";
+ import Contact from "./Contact";
+ import Home from "./Home";
+ import Blog from "./Blog";
+ import NoPage from "./NoPage";
+ import Search from './Search';
+import { Route, Routes} from "react-router-dom";
  //import AddIcon from '@mui/icons-material/Add';
  //import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
  //<script src="https://use.fontawesome.com/7237cdc153.js"></script>
@@ -315,13 +322,36 @@
 // }
 // export default App;
 
-const Appe= ()=>{
-  const [name, setName]= useState(1);
-  useEffect(() => {
-    document.title = `you clicked ${name} times`;
-  })
+// const Appe= ()=>{
+//   const [name, setName]= useState(1);
+//   useEffect(() => {
+//     document.title = `you clicked ${name} times`;
+//   })
+//   return (<>
+//     <button onClick={()=> setName(name+1)}>click me</button>
+//   </>)
+// }
+// export default Appe;
+import ComA from "./ComA";
+
+
+ const Appe = ()=>{
   return (<>
-    <button onClick={()=> setName(name+1)}>click me</button>
-  </>)
-}
-export default Appe;
+  <Layout />
+  <ComA />
+      <Routes>
+      <Route path="*" element={<NoPage />} />
+      <Route index element={<Home />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/Search" element={<Search />} />
+ 
+      
+     
+      
+     
+      </Routes>
+ </> );
+ }
+
+ export default Appe;

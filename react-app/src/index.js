@@ -2,10 +2,11 @@ import React from "react";
 import ReactDom from "react-dom";
 
 import Appe from "./Appe.jsx";
+import { BrowserRouter } from "react-router-dom";
 //import UseReducer from "./useReducer";
 
-ReactDom.render(
-   <Appe /> ,
+ReactDom.render(<BrowserRouter>
+   <Appe /> </BrowserRouter>,
 document.getElementById("root")
 );
 
